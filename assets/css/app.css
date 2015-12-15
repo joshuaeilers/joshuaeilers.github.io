@@ -1,0 +1,14 @@
+body {
+  background-color: #efefef;
+  padding: 1%;
+}
+
+.console {
+  font-family: "Courier New";
+  font-size: 28px;
+}
+
+.about {
+	margin-top: 50px;
+	max-width: 800px;
+}
