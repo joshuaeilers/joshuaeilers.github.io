@@ -13,8 +13,8 @@ body {
 
 .sidebar .photo {
 	border-radius: 50%;
-	max-width: 150px;
-	max-height: 150px;
+	max-width: 140px;
+	max-height: 140px;
 }
 
 .sidebar .list-group .glyphicon {
@@ -25,7 +25,11 @@ body {
 	margin-left: 20px;
 }
 
-.sidebar .list-inline li:last-child .glyphicon {
+.sidebar .list-inline li:nth-child(2) img {
+	 max-height: 30px;
+}
+
+.sidebar .list-inline li:nth-child(3) .glyphicon {
 	vertical-align: middle;
 	margin-top: 2px;
 	font-size: 28px;
