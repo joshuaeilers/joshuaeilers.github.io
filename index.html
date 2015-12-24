@@ -14,40 +14,41 @@
 
       <!-- sidebar -->
       <div class="col-md-3 content-container">
-        <div class="panel panel-default sidebar">
+        <div ng-controller="SidebarController" class="panel panel-default sidebar">
           <div class="panel-body">
             <img src="assets/img/me.jpg" class="photo"/>
             <h3>Joshua Eilers<br/><small>Software Engineer</small></h3>
             <hr/>
             <div class="list-group">
-              <a href="#" class="list-group-item active">About <span class="glyphicon glyphicon-chevron-right"></span></a>
-              <a href="#" class="list-group-item">Resume <span class="glyphicon glyphicon-chevron-right"></span></a>
-              <a href="#" class="list-group-item">Blog <span class="glyphicon glyphicon-chevron-right"></span></a>
+              <a ng-repeat="item in navItems"
+                ng-click="select($index)"
+                ng-class="{ active: $index == selected }"
+                href="#/{{ item.route }}"
+                class="list-group-item">
+                {{ item.name }} <span class="glyphicon glyphicon-chevron-right"></span>
+              </a>
             </div>
             <hr/>
             <ul class="list-inline">
+              <li><a href="mailto:eilers.joshua@gmail.com"><span class="glyphicon glyphicon-envelope"></span></a></li>
               <li><a href="https://github.com/joshuaeilers" target="_blank"><img src="assets/img/GitHub-Mark-32px.png"/></a></li>
               <li><a href="https://www.linkedin.com/in/joshuaeilers" target="_blank"><img src="assets/img/In-2C-34px-TM.png"/></a></li>
-              <li><a href="mailto:eilers.joshua@gmail.com"><span class="glyphicon glyphicon-envelope"></span></a></li>
             </ul>
           </div>
         </div>
       </div>
 
       <!-- content -->
-      <div class="col-md-9 content-container">
-        <div class="panel panel-default resume">
-          <div class="panel-body">
-            This is my resume
-          </div>
-        </div>
-      </div>
+      <div ng-view class="col-md-9 content-container"></div>
 
     </div>
   </div>
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/bootstrap.min.js"></script>
-  <script src="assets/js/angular.min.js"></script>
+<!--  <script src="assets/js/angular.min.js"></script> -->
+  <script src="assets/js/angular.js"></script>
+<!--  <script src="assets/js/angular-route.min.js"></script> -->
+  <script src="assets/js/angular-route.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

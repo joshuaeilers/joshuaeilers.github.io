@@ -25,13 +25,14 @@ body {
 	margin-left: 20px;
 }
 
-.sidebar .list-inline li:nth-child(2) img {
-	 max-height: 30px;
-}
-
-.sidebar .list-inline li:nth-child(3) .glyphicon {
+.sidebar .list-inline li:first-child .glyphicon {
 	vertical-align: middle;
 	margin-top: 2px;
 	font-size: 28px;
 	color: #555;
 }
+
+.sidebar .list-inline li:nth-child(3) img {
+	 max-height: 30px;
+}
+
