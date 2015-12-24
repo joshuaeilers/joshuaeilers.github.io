@@ -12,36 +12,40 @@
   <div class="container-fluid">
     <div class="row">
 
-      <!-- sidebar -->
-      <div class="col-md-3 content-container">
-        <div ng-controller="SidebarController" class="panel panel-default sidebar">
-          <div class="panel-body">
-            <img src="assets/img/me.jpg" class="photo"/>
-            <h3>Joshua Eilers<br/><small>Software Engineer</small></h3>
-            <hr/>
-            <div class="list-group">
-              <a href="#/about" class="list-group-item" ng-class="{active:isActive('/about')}">
-                About <span class="glyphicon glyphicon-chevron-right"></span>
-              </a>
-              <a href="#/resume" class="list-group-item" ng-class="{active:isActive('/resume')}">
-                Resume <span class="glyphicon glyphicon-chevron-right"></span>
-              </a>
-              <a href="#/blog" class="list-group-item" ng-class="{active:isActive('/blog')}">
-                Blog <span class="glyphicon glyphicon-chevron-right"></span>
-              </a>
+      <div class="container">
+
+        <!-- sidebar -->
+        <div class="col-md-3 content-container">
+          <div ng-controller="SidebarController" class="panel panel-default sidebar">
+            <div class="panel-body">
+              <img src="assets/img/me.jpg" class="photo"/>
+              <h3>Joshua Eilers<br/><small>Software Engineer</small></h3>
+              <hr/>
+              <div class="list-group">
+                <a href="#/about" class="list-group-item" ng-class="{active:isActive('/about')}">
+                  About <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+                <a href="#/resume" class="list-group-item" ng-class="{active:isActive('/resume')}">
+                  Resume <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+                <a href="#/blog" class="list-group-item" ng-class="{active:isActive('/blog')}">
+                  Blog <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+              </div>
+              <hr/>
+              <ul class="list-inline">
+                <li><a href="mailto:eilers.joshua@gmail.com"><span class="glyphicon glyphicon-envelope"></span></a></li>
+                <li><a href="https://github.com/joshuaeilers" target="_blank"><img src="assets/img/GitHub-Mark-32px.png"/></a></li>
+                <li><a href="https://www.linkedin.com/in/joshuaeilers" target="_blank"><img src="assets/img/In-2C-34px-TM.png"/></a></li>
+              </ul>
             </div>
-            <hr/>
-            <ul class="list-inline">
-              <li><a href="mailto:eilers.joshua@gmail.com"><span class="glyphicon glyphicon-envelope"></span></a></li>
-              <li><a href="https://github.com/joshuaeilers" target="_blank"><img src="assets/img/GitHub-Mark-32px.png"/></a></li>
-              <li><a href="https://www.linkedin.com/in/joshuaeilers" target="_blank"><img src="assets/img/In-2C-34px-TM.png"/></a></li>
-            </ul>
           </div>
         </div>
-      </div>
 
-      <!-- content -->
-      <div ng-view class="col-md-9 content-container"></div>
+        <!-- content -->
+        <div ng-view class="col-md-9 content-container"></div>
+
+      </div>
 
     </div>
   </div>
