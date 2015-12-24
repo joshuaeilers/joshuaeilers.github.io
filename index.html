@@ -20,12 +20,14 @@
             <h3>Joshua Eilers<br/><small>Software Engineer</small></h3>
             <hr/>
             <div class="list-group">
-              <a ng-repeat="item in navItems"
-                ng-click="select($index)"
-                ng-class="{ active: $index == selected }"
-                href="#/{{ item.route }}"
-                class="list-group-item">
-                {{ item.name }} <span class="glyphicon glyphicon-chevron-right"></span>
+              <a href="#/about" class="list-group-item" ng-class="{active:isActive('/about')}">
+                About <span class="glyphicon glyphicon-chevron-right"></span>
+              </a>
+              <a href="#/resume" class="list-group-item" ng-class="{active:isActive('/resume')}">
+                Resume <span class="glyphicon glyphicon-chevron-right"></span>
+              </a>
+              <a href="#/blog" class="list-group-item" ng-class="{active:isActive('/blog')}">
+                Blog <span class="glyphicon glyphicon-chevron-right"></span>
               </a>
             </div>
             <hr/>

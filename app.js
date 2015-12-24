@@ -1,15 +1,11 @@
 var app = angular.module('app', ['ngRoute']);
+
 var controllers = {};
 
-controllers.SidebarController = function($scope) {
-	$scope.navItems = [
-		{ name: 'About', route: 'about' },
-		{ name: 'Resume', route: 'resume' },
-		{ name: 'Blog', route: 'blog' }
-	];
-	$scope.selected = 0;
-	$scope.select = function(index) {
-		$scope.selected = index;
+controllers.SidebarController = function($scope, $location) {
+	$scope.isActive = function(p) {
+		var path = $location.path();
+		return (path == p) || (path == '/' && p == '/about');
 	};
 };
 
