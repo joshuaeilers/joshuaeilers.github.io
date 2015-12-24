@@ -1,0 +1,33 @@
+body {
+  background-color: #efefef;
+  padding: 5px;
+}
+
+.content-container {
+	padding: 5px;
+}
+
+.sidebar {
+	text-align: center;
+}
+
+.sidebar .photo {
+	border-radius: 50%;
+	max-width: 150px;
+	max-height: 150px;
+}
+
+.sidebar .list-group .glyphicon {
+	float: right;
+}
+
+.sidebar .list-inline li+li {
+	margin-left: 20px;
+}
+
+.sidebar .list-inline li:last-child .glyphicon {
+	vertical-align: middle;
+	margin-top: 2px;
+	font-size: 28px;
+	color: #555;
+}
