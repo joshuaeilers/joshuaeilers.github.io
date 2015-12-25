@@ -3,10 +3,6 @@ body {
   padding: 5px;
 }
 
-body > .container {
-	max-width: 1200px;
-}
-
 .content-container {
 	padding: 5px;
 }
@@ -15,12 +11,22 @@ body > .container {
 	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.18);
 }
 
-.nested-panel h3, .nested-panel small {
+.nested-panel small {
 	color: #777;
 }
 
 .nested-panel p {
 	margin-top: 10px;
+}
+
+.nested-panel .label {
+	padding: 5px;
+	border: 1px solid #1b809e;
+}
+
+.nested-panel .group {
+	border-left: 5px solid #ddd;
+	padding-left: 10px;
 }
 
 .sidebar {

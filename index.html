@@ -12,10 +12,8 @@
   <div class="container-fluid">
     <div class="row">
 
-      <div class="container">
-
         <!-- sidebar -->
-        <div class="col-md-3 content-container">
+        <div class="col-md-3 content-container affix">
           <div ng-controller="SidebarController" class="panel panel-default sidebar">
             <div class="panel-body">
               <img src="assets/img/me.jpg" class="photo"/>
@@ -43,9 +41,7 @@
         </div>
 
         <!-- content -->
-        <div ng-view class="col-md-9 content-container"></div>
-
-      </div>
+        <div ng-view class="col-md-9 content-container pull-right"></div>
 
     </div>
   </div>
