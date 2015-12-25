@@ -7,6 +7,16 @@ body {
 	padding: 5px;
 }
 
+.content-container > .panel {
+	margin-bottom: 0px;
+}
+
+@media(max-width: 991px) {
+	.content-container:first-child {
+	    position: relative;
+	}
+}
+
 .nested-panel {
 	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.18);
 }
