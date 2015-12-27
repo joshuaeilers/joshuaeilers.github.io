@@ -3,6 +3,10 @@ body {
   padding: 5px;
 }
 
+small {
+	color: #777;
+}
+
 .content-container {
 	padding: 5px;
 }
@@ -19,10 +23,6 @@ body {
 
 .nested-panel {
 	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.18);
-}
-
-.nested-panel small {
-	color: #777;
 }
 
 .nested-panel p {
@@ -69,4 +69,3 @@ body {
 .sidebar .list-inline li:nth-child(3) img {
 	 max-height: 30px;
 }
-

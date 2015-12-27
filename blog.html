@@ -3,13 +3,22 @@
 		<div ng-repeat="post in posts" class="panel panel-default nested-panel">
 			<div class="panel-body">
 				<h3>{{ post.title }}</h3>
-				<small><span class="glyphicon glyphicon-calendar"></span> {{ post.date }}</small>
-				<small><span class="glyphicon glyphicon-comment"></span> {{ post.commentCount }} Comments</small>
+				<ul class="list-inline">
+					<!-- todo - pluralize the unit based on the scale -->
+					<li>
+						<small>
+							<span class="glyphicon glyphicon-calendar"></span>
+							{{ post.elapsed.scale }} {{ post.elapsed.unit }}{{ post.elapsed.scale > 1 ? 's' : ''}} ago
+						</small>
+					</li>
+					<li><small><span class="glyphicon glyphicon-comment"></span> {{ post.commentCount }} Comments</small></li>
+					<li><small><span class="glyphicon glyphicon-thumbs-up"></span> {{ post.likes }} Likes</small></li>
+				</ul>
 				<!-- todo make this url-encoded? -->
-				<p>{{ post.preview }} <a href="#/post/{{ post.title }}">Continue reading...</a></p>
+				<p>{{ post.preview }} <a href="#/posts/{{ post.title }}">Continue reading...</a></p>
 				<p>
-					In <a href="#/collection/{{ post.collection }}">{{ post.collection }}</a>
-					, with tags <a ng-repeat="tag in post.tags" href="#/tag/{{ tag }}">{{ tag }} </a>
+					In <a href="#/collections/{{ post.collection }}">{{ post.collection }}</a>
+					| Tags <a ng-repeat="tag in post.tags" href="#/tags/{{ tag }}">{{ tag }} </a>
 				</p>
 			</div>
 		</div>
