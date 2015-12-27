@@ -46,7 +46,7 @@ app.service(services);
 var controllers = {};
 
 controllers.SidebarController = function($scope, $location) {
-	$scope.isActive = function(p) {
+	$scope.isSelected = function(p) {
 		var path = $location.path();
 		return (path == p) || (path == '/' && p == '/about');
 	};

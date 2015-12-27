@@ -50,9 +50,17 @@ small {
 	border: 5px solid #ddd;
 }
 
-.sidebar .list-group .glyphicon {
+.sidebar .list-group .list-group-item.selected {
+	font-weight: bold;
+}
+
+.sidebar .list-group .list-group-item.selected:after {
+	font-family: "Glyphicons Halflings";
+	content: "\e258";
 	margin-top: 2px;
-	float: right;
+	position: absolute;
+	right: 10px;
+	top: 10px;
 }
 
 .sidebar .list-inline li+li {
