@@ -52,6 +52,7 @@ small {
 
 .sidebar .list-group .list-group-item.selected {
 	font-weight: bold;
+	background: #f5f5f5;
 }
 
 .sidebar .list-group .list-group-item.selected:after {
@@ -59,8 +60,8 @@ small {
 	content: "\e258";
 	margin-top: 2px;
 	position: absolute;
-	right: 10px;
-	top: 10px;
+	right: 15px;
+	top: 8px;
 }
 
 .sidebar .list-inline li+li {
