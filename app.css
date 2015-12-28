@@ -60,6 +60,11 @@ small {
 	border: 1px dashed #ddd;
 	border-left: none;
 	border-right: none;
+	background: transparent;
+}
+
+.sidebar .list-group-item:focus {
+	background: transparent;
 }
 
 .sidebar .list-group-item:hover {
@@ -68,7 +73,6 @@ small {
 
 .sidebar .list-group-item.selected {
 	font-weight: bold;
-	background: transparent;
 }
 
 .sidebar .list-group-item.selected:after {
