@@ -45,7 +45,6 @@ gulp.task('src-js', function() {
   return gulp.src(paths.src.js)
     .pipe(jshint())
     .pipe(jshint.reporter('jshint-stylish'))
-    .pipe(jshint.reporter('fail'))
     .pipe(sourcemaps.init())
     .pipe(ngAnnotate())
     .pipe(wrap('(function(){"use strict";<%= contents %>})();'))
