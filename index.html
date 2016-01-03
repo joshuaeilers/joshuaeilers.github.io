@@ -1,34 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
-
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Joshua Eilers</title>
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/css/app.css" rel="stylesheet">
-  </head>
-  <body>
-
-    <div class="typer">
-      <span class="text"></span><span class="cursor"></span>
-    </div>
-
-    <div class="about container-fluid">
-      <div class="panel panel-default">
-        <div class="panel-body">
-          <h3 class="text-center">Under construction</h3>
-        </div>
-      </div>
-    </div>
-
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/core.js"></script>
-    <script src="assets/js/typer.js"></script>
-    <script src="assets/js/main.js"></script>
-
-  </body>
-
+<html>
+<head>
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>Joshua Eilers</title>
+  <link rel="stylesheet" href="assets/css/vendor.css">
+  <link rel="stylesheet" href="assets/css/app.css">
+</head>
+<body ng-app="app" ng-cloak>
+  <div ng-view></div>
+  <script src="assets/js/vendor.js"></script>
+  <script src="assets/js/app.min.js"></script>
+</body>
 </html>
