@@ -15,18 +15,19 @@
     <md-sidenav md-is-locked-open="$mdMedia('gt-sm')"
                 class="md-whiteframe-z3"
                 md-component-id="left"
-                layout-align="start center"
-                layout-padding>
-      <img ng-src="{{vm.img}}"></img>
-      <md-list>
-        <md-list-item ng-repeat="link in vm.links">
-          <md-button ng-href="{{link.loc}}">{{link.label}}</md-button>
-          <md-divider ng-if="!$last"></md-divider>
-        </md-list-item>
-      </md-list>
+                layout="column">
+      <md-content layout="row" layout-align="center" layout-padding>
+        <img ng-src="{{vm.img}}"></img>
+      </md-content>
+      <md-button style="margin: 0px; padding: 15px;"
+                 ng-repeat="link in vm.links"
+                 ng-href="#{{link.loc}}"
+                 ng-disabled="vm.isSelected(link.loc)">
+        {{link.label}}
+      </md-button>
     </md-sidenav>
 
-    <md-content flex id="content" layout-padding ng-view></md-content>
+    <md-content flex layout-padding ng-view></md-content>
   </div>
 
   <script src="assets/js/vendor.js"></script>
