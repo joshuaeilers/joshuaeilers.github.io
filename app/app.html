@@ -1,0 +1,25 @@
+<section layout="row">
+  <md-sidenav md-is-locked-open="$mdMedia('gt-sm')"
+              class="md-sidenav-left md-whiteframe-z3 sidebar"
+              md-component-id="left"
+              layout="column">
+    <md-content layout="column" layout-align="start center" layout-padding>
+      <img ng-src="{{vm.me.img}}"></img>
+      <h5 class="md-headline name">{{vm.me.name}}</h5>
+      <h5 class="md-subhead title">{{vm.me.title}}</h5>
+    </md-content>
+    <md-button ng-repeat="link in vm.links"
+               ng-click="vm.navigateTo(link)"
+               ng-class="{'selected md-primary':vm.isSelected(link)}"
+               class="link">
+      {{link.label}}
+    </md-button>
+  </md-sidenav>
+
+  <div flex layout="column">
+    <md-toolbar layout="row" layout-align="center">
+      <h1>{{vm.me.name}}</h1>
+    </md-toolbar>
+    <md-content layout-padding ng-view></md-content>
+  </div>
+</section>

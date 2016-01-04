@@ -5,31 +5,12 @@
   <title>Joshua Eilers</title>
   <link rel="stylesheet" href="assets/css/vendor.css">
   <link rel="stylesheet" href="assets/css/app.css">
+  <style type="text/css">
+    [ng\:cloak], [ng-cloak], .ng-cloak { display: none !important; }
+  </style>
 </head>
-<body ng-app="app" ng-controller="AppController as vm" layout="column">
-  <md-toolbar layout="row" layout-align="center">
-    <h1>{ {{vm.name}} }</h1>
-  </md-toolbar>
-
-  <div flex layout="row">
-    <md-sidenav md-is-locked-open="$mdMedia('gt-sm')"
-                class="md-whiteframe-z3"
-                md-component-id="left"
-                layout="column">
-      <md-content layout="row" layout-align="center" layout-padding>
-        <img ng-src="{{vm.img}}"></img>
-      </md-content>
-      <md-button style="margin: 0px; padding: 15px;"
-                 ng-repeat="link in vm.links"
-                 ng-href="#{{link.loc}}"
-                 ng-disabled="vm.isSelected(link.loc)">
-        {{link.label}}
-      </md-button>
-    </md-sidenav>
-
-    <md-content flex layout-padding ng-view></md-content>
-  </div>
-
+<body>
+  <app ng-app="app" ng-cloak></app>
   <script src="assets/js/vendor.js"></script>
   <script>
     angular.module('app', ['ngMaterial', 'ngRoute']);
