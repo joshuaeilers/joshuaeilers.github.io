@@ -3,8 +3,6 @@ angular.module('app').config(RouteConfig);
 function RouteConfig($routeProvider) {
   $routeProvider
     .when('/', {
-      controller: 'AboutController',
-      controllerAs: 'vm',
       templateUrl: 'app/about/about.html'
     })
     .when('/resume', {

@@ -8,18 +8,21 @@ function App() {
   };
 }
 
-function AppController($location) {
+function AppController($location, ProfileService) {
   var vm = this;
-  vm.me = {
-    name: 'Joshua Eilers',
-    title: 'Software Engineer',
-    img: 'assets/img/me.jpg'
-  };
   vm.links = [
     { label: 'About', loc: '/' },
     { label: 'Resume', loc: '/resume' },
     { label: 'Blog', loc: '/blog' }
   ];
+
+  init();
+
+  function init() {
+    ProfileService.load('me').then(function(profile) {
+      vm.profile = profile;
+    });
+  }
 
   vm.isSelected = function(link) {
     return $location.path() == link.loc;

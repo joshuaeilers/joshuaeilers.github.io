@@ -4,9 +4,9 @@
               md-component-id="left"
               layout="column">
     <md-content layout="column" layout-align="start center" layout-padding>
-      <img ng-src="{{vm.me.img}}"></img>
-      <h5 class="md-headline name">{{vm.me.name}}</h5>
-      <h5 class="md-subhead title">{{vm.me.title}}</h5>
+      <img ng-src="{{vm.profile.img}}"></img>
+      <h5 class="md-headline name">{{vm.profile.name}}</h5>
+      <h5 class="md-subhead title">{{vm.profile.title}}</h5>
     </md-content>
     <md-button ng-repeat="link in vm.links"
                ng-click="vm.navigateTo(link)"
@@ -18,7 +18,7 @@
 
   <div flex layout="column">
     <md-toolbar layout="row" layout-align="center">
-      <h1>{{vm.me.name}}</h1>
+      <h1>{{vm.profile.name}}</h1>
     </md-toolbar>
     <md-content layout-padding ng-view></md-content>
   </div>

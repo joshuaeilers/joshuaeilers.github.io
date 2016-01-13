@@ -1,3 +1,46 @@
-<div>
-  <h1>{{vm.title}}</h1>
+<style>
+  .timeline-row {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .timeline-panel {
+    width: 500px;
+  }
+
+  .timeline-horiz-divider {
+    /*display: block;*/
+  }
+
+  .timeline-marker {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%,-50%);
+  }
+</style>
+
+<div ng-repeat="section in vm.sections"
+     class="timeline-row"
+     layout="row"
+     ng-attr-layout-align="{{$odd ? 'end end' : 'start start'}}">
+
+  <div layout="row"
+       ng-attr-layout-align="{{$odd ? 'end' : 'start'}} center">
+
+    <div class="md-whiteframe-3dp timeline-panel" layout="column">
+      <h2 class="md-title" layout-padding>{{section.title}}</h2>
+      <md-divider></md-divider>
+      <p class="md-body-1" layout-padding>
+        {{section.body}}
+      </p>
+    </div>
+
+    <md-divider class="timeline-horiz-divider"></md-divider>
+
+    <md-button class="md-fab md-primary timeline-marker">
+      2013
+    </md-button>
+
+  </div>
 </div>
